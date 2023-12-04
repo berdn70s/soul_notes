@@ -1,6 +1,6 @@
-class Notes{
-  String text;
-  String owner;
 
-  Notes(this.owner, this.text);
+class Note {
+  final String partner;
+  String content;
+  Note(this.partner, this.content);
 }

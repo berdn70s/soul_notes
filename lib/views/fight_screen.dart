@@ -1,7 +1,6 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import '../models/fights.dart';
 import 'notes.dart';
@@ -15,7 +14,7 @@ class FightScreen extends StatefulWidget {
 
 class _FightScreenState extends State<FightScreen> {
   var isSolved = Bool;
-  final TextEditingController _textController = TextEditingController();
+  //final TextEditingController _textController = TextEditingController();
   List<Fight> fights = [
     Fight(name: 'Fight 1', date: '12.12.23', description: 'Description 1'),
     Fight(name: 'Fight 2', date: '12.12.23', description: 'Description 2'),
@@ -38,7 +37,7 @@ class _FightScreenState extends State<FightScreen> {
       },
     );
   }
-// DESCRIPTION KISMI COULDUYSE KALP SEKLINDE COZULMEDIYSE YARRRAK SEKLINDE
+// DESCRIPTION KISMI COULDUYSE KALP SEKLINDE COZULMEDIYSE baska SEKLINDE
   void _showEditFightDialog(BuildContext context, Fight fight) {
     final _dateController = TextEditingController(text: fight.date);
     final _titleController = TextEditingController(text: fight.name);
@@ -93,7 +92,7 @@ class _FightScreenState extends State<FightScreen> {
             });
           }, child: const Text("Delete"),
           style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.red))),
-            SizedBox(width: 30,),
+            SizedBox(width: 0,),
             TextButton(
               onPressed: () => Navigator.pop(context),
               child: const Text('Cancel'),
@@ -153,7 +152,7 @@ class _FightScreenState extends State<FightScreen> {
           onPressed: () {
             _showEditFightDialog(context, Fight(name: '', date: '', description: ''));
           },
-          child: const Icon(Icons.add),
+          child: const Icon(Icons.add,color: Colors.white60),
         ),
       ),
     );
